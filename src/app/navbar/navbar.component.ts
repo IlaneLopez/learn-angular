@@ -13,8 +13,8 @@ export class NavbarComponent implements OnInit {
     path: '/tasks'
   },
   {
-    name: 'Task',
-    path: '/task'
+    name: 'New',
+    path: '/new'
   }
   ]
 
