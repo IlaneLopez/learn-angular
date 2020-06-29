@@ -4,10 +4,18 @@ import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TasksComponent } from './tasks/tasks.component';
+import { TaskComponent } from './tasks/task/task.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ItemComponent } from './navbar/item/item.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TasksComponent,
+    TaskComponent,
+    NavbarComponent,
+    ItemComponent
   ],
   imports: [
     BrowserModule,
