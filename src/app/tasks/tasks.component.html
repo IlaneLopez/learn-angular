@@ -5,14 +5,16 @@
       <th scope="col">post id</th>
       <th scope="col">title</th>
       <th scope="col">description</th>
+      <th scope="col">Actions</th>
     </tr>
   </thead>
   <tbody *ngFor="let post of posts">
     <tr>
       <th scope="row">{{post.userId}}</th>
-      <td><a href="posts/{{post.id}}"></a></td>
+      <td><a  href="task/{{post.id}}">Post n°{{post.id}}</a></td>
       <td>{{post.title}}</td>
       <td>{{post.body}}</td>
+      <td><button class="btn btn-danger" (click)="deleteRow(post.id)">Delete</button></td>
     </tr>
   </tbody>
 </table>

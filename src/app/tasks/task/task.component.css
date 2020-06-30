@@ -1,0 +1,13 @@
+.singlePost {
+    width: 50%;
+    margin: auto;
+    margin-top: 10%;
+    box-shadow: 10px 10px 43px -19px rgba(0, 0, 0, 0.75);
+    min-height: 200px;
+    padding: 20px;
+    text-align: center;
+}
+
+p {
+  margin-top:50px;  
+}
