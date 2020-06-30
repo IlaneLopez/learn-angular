@@ -7,4 +7,7 @@ export class ApiService {
     getAllPosts() {
         return this.http.get<any>(`https://jsonplaceholder.typicode.com/posts`);
     }
+    getPost(id) {
+        return this.http.get<any>(`https://jsonplaceholder.typicode.com/posts/${id}`);      
+      }
 }
