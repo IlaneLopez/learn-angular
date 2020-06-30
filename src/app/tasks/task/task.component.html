@@ -1,1 +1,8 @@
-<p>task works!</p>
+<div class="singlePost" *ngIf="post !== null else loading">
+    <h2>{{post.title}}</h2>
+    <p>{{post.body}}</p>
+</div>
+
+<ng-template #loading>
+    <div>Loading...</div>
+</ng-template>
