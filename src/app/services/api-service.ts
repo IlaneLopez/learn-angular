@@ -16,4 +16,8 @@ export class ApiService {
     addPost(data) {
         return this.http.post<any>(`http://localhost:3000/posts/new`, data);
     }
+
+    updatePost(post) {
+        return this.http.post<any>(`http://localhost:3000/posts/edit`, post);
+    }
 }

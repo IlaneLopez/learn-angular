@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ApiService } from '../../../services/api-service'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new',
@@ -13,13 +14,14 @@ export class NewComponent implements OnInit {
   postBody = null;
 
   constructor(
-    private apiService: ApiService) {
+    private apiService: ApiService,
+    private router: Router) {
   }
 
   async addPost(data) {
     await this.apiService.addPost(data).subscribe(
       async () => {
-        console.log("succès")
+        this.router.navigate(['tasks'])
       },
       (error) => {
         console.log(error)

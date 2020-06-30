@@ -9,6 +9,8 @@ import { async } from 'rxjs/internal/scheduler/async';
 export class TasksComponent implements OnInit {
 
   posts = [];
+  p: number = 1;
+  term = "";
 
   constructor(private apiService: ApiService) {
   }

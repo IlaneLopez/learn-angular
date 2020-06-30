@@ -10,6 +10,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ItemComponent } from './navbar/item/item.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NewComponent } from './tasks/task/new/new.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { EditComponent } from './tasks/task/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +21,16 @@ import { NewComponent } from './tasks/task/new/new.component';
     TaskComponent,
     NavbarComponent,
     ItemComponent,
-    NewComponent
+    NewComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent],

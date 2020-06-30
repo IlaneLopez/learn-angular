@@ -1,3 +1,5 @@
+<div class="col-md-12">
+<input class="form-control searchBar" type="text" [(ngModel)]="term" placeholder="Search...">
 <table class="table table-dark">
   <thead>
     <tr>
@@ -7,12 +9,18 @@
       <th scope="col">Actions</th>
     </tr>
   </thead>
-  <tbody *ngFor="let post of posts">
+  <tbody *ngFor="let post of posts | filter:term | paginate: { itemsPerPage: 5, currentPage: p }  ">
     <tr>
-      <td><a  href="task/{{post.id}}">Post n°{{post.id}}</a></td>
+      <td><a href="task/{{post.id}}">Post n°{{post.id}}</a></td>
       <td>{{post.title}}</td>
       <td>{{post.body}}</td>
-      <td><button class="btn btn-danger" (click)="deleteRow(post.id)">Delete</button></td>
+      <td>
+        <button class="btn btn-danger" (click)="deleteRow(post.id)">Delete</button>
+        <a class="mleft15 btn btn-info" href="edit/{{post.id}}">Update</a>
+      </td>
     </tr>
   </tbody>
 </table>
+
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

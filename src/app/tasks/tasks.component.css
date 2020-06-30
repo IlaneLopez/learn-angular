@@ -1,0 +1,9 @@
+.searchBar {
+    max-width: 300px;
+    margin: 10px;
+    float: right;
+}
+
+.mleft15 {
+    margin-left:15px!important;
+}

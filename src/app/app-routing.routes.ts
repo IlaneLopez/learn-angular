@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { TasksComponent } from './tasks/tasks.component';
 import { TaskComponent } from './tasks/task/task.component';
 import { NewComponent } from './tasks/task/new/new.component';
+import { EditComponent } from './tasks/task/edit/edit.component';
 
 
 export const appRoutes: Routes = [
@@ -17,6 +18,10 @@ export const appRoutes: Routes = [
   {
     path: 'new',
     component: NewComponent
+  },
+  {
+    path: 'edit/:id',
+    component: EditComponent
   },
   {
     path: '',

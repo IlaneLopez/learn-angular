@@ -1,0 +1,19 @@
+<div class="container" *ngIf="post !== null else notFound">
+    <div class="row">
+        <div class="col-md-12 mtop20">
+            <label>Title</label>
+            <input class="form-control" type="text" [(ngModel)]="post.title" placeholder="Post title" />
+
+            <hr>
+
+            <label>Body</label>
+            <input class="form-control" type="text" [(ngModel)]="post.body" placeholder="Post body" />
+            <br>
+
+            <input type="submit" (click)="updatePost()" value="Valider" class="btn btn-success" />
+        </div>
+    </div>
+</div>
+<ng-template #notFound>
+    Loading...
+</ng-template>
