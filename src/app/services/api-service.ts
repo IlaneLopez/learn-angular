@@ -5,12 +5,12 @@ import { Injectable } from '@angular/core';
 export class ApiService {
     constructor(private http: HttpClient) { }
     getAllPosts() {
-        return this.http.get<any>(`https://jsonplaceholder.typicode.com/posts`);
+        return this.http.get<any>(`http://localhost:3000/posts`);
     }
     getPost(id) {
-        return this.http.get<any>(`https://jsonplaceholder.typicode.com/posts/${id}`);
+        return this.http.get<any>(`http://localhost:3000/posts/${id}`);
     }
     deletePost(id) {
-        return this.http.delete<any>(`https://jsonplaceholder.typicode.com/posts/${id}`);
+        return this.http.delete<any>(`http://localhost:3000/posts/${id}`);
     }
 }

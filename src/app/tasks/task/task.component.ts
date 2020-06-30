@@ -11,7 +11,6 @@ export class TaskComponent implements OnInit {
 
   post = null;
   postId = null;
-  
 
   constructor(
     private apiService: ApiService,
