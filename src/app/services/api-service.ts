@@ -12,5 +12,8 @@ export class ApiService {
     }
     deletePost(id) {
         return this.http.delete<any>(`http://localhost:3000/posts/${id}`);
+    }   
+    addPost(data) {
+        return this.http.post<any>(`http://localhost:3000/posts/new`, data);
     }
 }
